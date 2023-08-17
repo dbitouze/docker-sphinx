@@ -1,9 +1,9 @@
 FROM python:slim
-MAINTAINER Christophe CHAUVET <christophe.chauvet+docker@gmail.com>
+MAINTAINER Denis Bitouzé <denis.bitouze@univ-littoral.fr>
 
-LABEL org.opencontainers.image.authors = "Mirounga Sphinx Team <https://github.com/mga-sphinx>"
+LABEL org.opencontainers.image.authors = "Denis Bitouzé <https://github.com/dbitouze>"
 LABEL org.opencontainers.image.documentation = "https://sphinx-doc.org/"
-LABEL org.opencontainers.image.source = "https://github.com/mga-sphinx/docker-sphinx"
+LABEL org.opencontainers.image.source = "https://github.com/dbitouze/docker-sphinx"
 LABEL org.opencontainers.image.version = "7.1.2"
 LABEL org.opencontainers.image.licenses = "BSD-2-Clause"
 LABEL org.opencontainers.image.description = "HTML container image for Sphinx"
@@ -22,9 +22,11 @@ RUN apt-get update \
 
 RUN python3 -m pip install --no-cache-dir -U pip
 RUN python3 -m pip install --no-cache-dir Sphinx==7.1.2 Pillow \
-      sphinx-rtd-theme \
       furo \
-      sphinx-book-theme \
-      sphinx-press-theme
-
+      sphinx_comments \
+      sphinx_design \
+      sphinxext.opengraph \
+      myst_parser \
+      linkify-it-py
+      
 CMD ["make", "html"]
