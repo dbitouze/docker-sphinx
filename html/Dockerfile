@@ -1,7 +1,7 @@
 FROM python:slim
 MAINTAINER Denis Bitouzé <denis.bitouze@univ-littoral.fr>
 
-LABEL org.opencontainers.image.authors = "Denis Bitouzé <https://github.com/dbitouze>"
+LABEL org.opencontainers.image.authors = "Mirounga Sphinx Team <https://github.com/mga-sphinx> and Denis Bitouzé <https://github.com/dbitouze>"
 LABEL org.opencontainers.image.documentation = "https://sphinx-doc.org/"
 LABEL org.opencontainers.image.source = "https://github.com/dbitouze/docker-sphinx"
 LABEL org.opencontainers.image.version = "7.1.2"
