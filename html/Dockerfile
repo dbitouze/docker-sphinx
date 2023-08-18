@@ -14,6 +14,7 @@ RUN apt-get update \
       graphviz \
       imagemagick \
       make \
+      git-restore-mtime \
  && apt-get autoremove \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
