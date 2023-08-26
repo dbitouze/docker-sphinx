@@ -29,6 +29,7 @@ RUN python3 -m pip install --no-cache-dir Sphinx==7.1.2 Pillow \
       sphinxext.opengraph \
       myst_parser \
       linkify-it-py \
-      sphinx_tippy
+      sphinx_tippy \
+      sphinx_sitemap
       
 CMD ["make", "html"]
